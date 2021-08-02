@@ -1,0 +1,221 @@
+	*{
+		border: 0px;
+		margin: 0px;
+		padding: 0px;
+	}
+	.navigation{
+		width: 1160px;
+		height: 40px;
+		
+		background-color: #3B99FC;
+		margin: 0px auto;
+	}
+	
+	.a80{
+		width: 590px;
+		height: 160px;
+		border: red solid 1px;
+		
+		}
+		#a91,#a92{
+			
+			margin-left: 10px;
+		}
+		#a94,#a92{
+			margin-top: 20px;
+		}
+	
+	  
+	 .navigation li span{
+		 text-align: center;
+		 line-height: 40px;
+	 }
+	 .navigation li{
+		 float: left;
+		 list-style: none;
+	
+		 height: 40px;
+		 width: 145px;
+		 text-align: center;
+	 }
+	 .navigation_item{
+		 background-color: royalblue;
+	 }
+	 .navigation li:hover{
+		 background-color: blue
+	 }
+	 .servise{
+	 	
+	 	width: 170px;
+	 	height: 70px;
+	 	float: left;
+	 	
+	 	
+	 }
+	 .servise .servise_item{
+	 	text-align: center;
+	 	
+	 }
+	 .servise dt{
+	 	
+	 		text-align: center;
+	 }
+	 .servise dt font{
+	 	font-size: 14px;
+	 	color: darkslategray;
+	 }
+	 .servise a{
+	 	text-decoration: none;
+	 }
+	 .servise img{
+	 	width: 50px;
+	 	height: 50px;
+	 }
+	 #q1{
+	 	width: 1190px;
+	 	height: 70px;
+	 	margin: 0px  auto;
+	 }
+	 #a60{
+	 	width: 1194px;
+	 	height: 344px;
+	 	
+	 	margin: 0px auto;
+	 	
+	 	}
+	 	#a60 img{
+	 		width: 590px;
+	 		height: 160px;
+	 		float: left;
+	 		
+	 	}
+
+	 .a1{
+	 	width: 50px;
+	 	height: 391px;
+	 	position: fixed;
+	 	right: 0px;
+	 	top: 150px;
+	 }
+	 .a2{
+	 	width: 50px;
+	 	height: 85.2px;
+	 	margin-bottom: 5px;
+	 	
+	 }
+	 .a3{
+	 	width: 50px;
+	 	height: 120.4px;
+	 
+	 	
+	 }
+	 .travel_item{
+	 	width: 288px;
+	 	height: 242px;
+	 	border: 0px solid gray;
+	 }
+	 .travel_item dt img{
+	 	width: 288px;
+	 	height: 160px;
+	 		
+	 }
+	 .travel_item{
+	 /* 	font-size: 12px;
+	 	width: 288px; */
+	 /* 	height: 81.6px; */
+	 	float: left;
+	 	margin: 5px;
+	 	
+	 	/* margin-top: 10px; */
+	 }
+	 .travel_item dd{
+	 	line-height: 32px;
+	 	width: 288px;
+	 	margin-bottom: 10px;
+	 }
+	 .travel_item dt{
+	 	liheight: 29.6px;
+	 	width: 288px;
+	 	margin-bottom: 10px;
+	 	}
+	 .travel_item font{
+	 	font-size: 7px;
+	 	
+	 
+	 }
+	 .travel_item p:hover{
+	 	color: #00BFFF;
+	 }
+	 .travel_item span:hover{
+	 	color: #00BFFF;
+	 }
+	 .travel_item img:hover{
+	 	color: #00BFFF;
+	 }
+	 .a101{
+	 	width: 1194px;
+	 	height: 498px;
+	 	border: #00BFFF 0px solid;
+	 	margin: 0px auto;
+	 }
+	
+	 	.a50{
+	 		height:300px ;
+	 		width: 390px;
+	 		border:  solid  1px  #3B99FC;
+	 	float:  left;
+	 	
+	 		
+	 	
+	 	}
+	 	.a50 h3{
+	 			/* border: #00FFFF solid 1px; */
+	 			height: 40px;
+	 			text-align: center;
+	 			background-color: #3B99FC;
+	 			
+	 			line-height: 40px;
+	 			width: 391px;
+	 			}
+	 	.a50 ul{
+	 		text-decoration: none;
+	 			
+	 		margin-top: 30px;
+	 		margin-left: 40px;
+	 		
+	 		
+	 	}
+	 	
+	 	  .a50 li{
+	 		 	margin-left: 40px;
+	 			
+	 			height: 40px;
+	 			/* list风格,对因为li标签出现的圆盘进行去除 */
+	 			list-style: none;
+	 			list-style-image: url(../img/15.png);
+	 				
+	 			
+	 		
+	 	}
+	 	 .a50 li a{
+	 		text-decoration: none;
+	 		font-size: 14px;
+	 		color: darkslategray;
+	 			
+	 		
+	 	}
+	 	.a50 li a:hover{
+	 		color: deepskyblue ;
+	 			
+	 		
+	 	}
+	 	#table{
+	 		height: 390px;
+	 		width: 1196px;
+	 	margin: 0px auto ;
+	 		
+	 			
+	 	}
+	 	#a33,#a34{
+	 		margin-left: 10px;
+	 	}
