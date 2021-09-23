@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .banner{
+width: 1226px;
+            height: 460px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .banner>img{
+            width: 100%;
+        }
+        .prev,.next{
+            display: block;
+            width: 41px;
+            height: 69px;
+            background-color: red;
+            position: absolute;
+            top: 50%;
+            margin-top: -34.5px;
+        }
+        .next{
+            left: 100%;
+margin-left: -41px;
+        }
+        .btn{
+            position: absolute;
+            right: 30px;
+            bottom: 20px;
+        }
+        .btn>a{
+            float: left;
+            width: 6px;
+            height: 6px;
+            border: 2px solid rgba(255,255,255,.3);
+            margin: 0 4px;
+            background-color: rgba(0,0,0,.4);
+            border-radius: 50%;
+        }
+        .btn>a:hover{
+            border-color: rgba(0,0,0,.4);
+            background-color: rgba(255,255,255,.3);
+        }
+
+
+    </style>
+
+</head>
+<body>
+<div class="banner">
+    <img src="./img/1.jpg" alt="">
+    <a href="#" class='prev'></a>
+    <a href="#" class="next"></a>
+    <div class="btn">
+        <a href="#" onclick="fn(0);"></a>
+        <a href="#" onclick="fn(1);"></a>
+        <a href="#" onclick="fn(2);"></a>
+        <a href="#" onclick="fn(3);"></a>
+        <a href="#" onclick="fn(4);"></a>
+    </div>
+</div>
+</body>
+</html>
+<script src="lunbotu.js" ></script>
