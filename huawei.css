@@ -1,0 +1,528 @@
+/*黑色背景开始*/
+.black{
+    width: 100%;
+    height: 25px;
+    background-color: #111;
+    color: #F7F7F7;
+    font-size: 12px;
+}
+.black-wrap{
+    max-width: 1520px;
+    width: 100%;
+    /*overflow: hidden;*/
+}
+.black-left,.black-center,.black-right{
+    line-height: 25px;
+    float: left;
+    position: relative;
+}
+
+.black-center{
+border-right: 1px solid white ;
+  padding:0  12px;
+   box-sizing: border-box;
+}
+.black-right{
+
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+.black-left>li{
+    line-height: 12px;
+}
+.black-left::after,.black-center::before,.black-center::after,.black-right::before{
+    content: "\e66e";
+    font-family: iconfont;
+    line-height: 25px;
+    font-size: 8px;
+    color: #ccc;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding-left: 3px;
+}
+.black-left::after{
+    position: relative;
+    top: -2px;
+}
+.black-center::before{
+    content: "\e7bb";
+    box-sizing: border-box;
+    padding-right: 3px;
+
+}
+.black-center::after{
+    content: "\e66e";
+    /*box-sizing: border-box;*/
+    position: relative;
+    top: -2px;
+}
+.black-right::before{
+    content: "\e63a";
+    font-size: 12px;
+}
+.black-left{
+    float: left;
+    padding: 0 12px;
+    box-sizing: border-box;
+    position: absolute;
+}
+.float{
+    float: right;
+}
+.black-left>span{
+    text-decoration: underline;
+}
+.black-center>span:hover{
+    text-decoration: underline;
+}
+.select{
+    width: 100%;
+    height: 200px;
+    background-color: red;
+display: none;
+
+}
+/*下拉框开始*/
+/*.website{*/
+/*    width: 1700px;*/
+/*    height: 400px;*/
+/*    display: none;*/
+/*    position: absolute;*/
+/*    background-color: red;*/
+/*    top: 25px;*/
+/*    left: -50px;*/
+/*}*/
+
+
+
+/*.website>ul{*/
+/*    width: 100%;*/
+/*    height: 400px;*/
+/*}*/
+/*.website>ul>li{*/
+/*    width: 400px;*/
+/*    height: 400px;*/
+/*    background-color: green;*/
+/*    float: left;*/
+/*}*/
+/*.black-left:hover>.website{*/
+/*    display: inline-block;*/
+/*}*/
+/*下拉框结束*/
+/*即使两个字体图标的数值是一样的，但是实际中占的空间不一定相同，所以当一列中有多个字体图标需要调位置时，一定根据他们的父元素来调位，而且它们的父元素大小由内容撑开*/
+/*黑色背景结束*/
+/*菜单开始*/
+.menu{
+    width: 100%;
+    height: 66px;
+    box-sizing: border-box;
+    padding: 0 15px;
+    display: flex;
+}
+.menu-lift{
+    width: 127px;
+    height: 30px;
+    padding: 19px 0;
+}
+.menu-center{
+    height: 68px;
+    flex-grow: 1;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+.menu-right{
+    width: 24px;
+    height: 68px;
+}
+.menu-center>ul>li{
+    height: 68px;
+    float: left;
+    margin: 0 20px;
+    line-height: 68px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.menu-center i{
+    font-size: 18px;
+    font-weight: 800;
+    padding-top: 2px;
+    color: rgb(199, 0, 11);
+}
+.menu-center .font{
+    font-size: 16px;
+    color:rgb(136, 136, 136);
+}
+.menu-right .font1{
+    color: rgb(199, 0, 11);
+    font-size: 20px;
+    line-height: 68px;
+    cursor: pointer;
+}
+/*菜单结束*/
+/*banner开始*/
+.banner{
+    width: 100%;
+    height: 519px;
+    background: url("./img/banner-new-202007.jpg") no-repeat center;
+    background-size: auto 100%;
+}
+.banner-box1{
+    width: 100%;
+    height: 56px;
+background-color: rgba(0, 0, 0, 0.3)
+}
+.banner-box2{
+    width: 925px;
+    height: 266px;
+    margin: 0 auto;
+}
+.banner-box3{
+    width: 100%;
+    height: 102px;
+    margin-top: 95px;
+    background-color: rgba(0, 0, 0, 0.3)
+}
+.banner-box1>ul{
+    width: 1230px;
+    height: 56px;
+    margin: 0 20px;
+    color:rgb(255, 255, 255);
+}
+.banner-box1>ul>li{
+    float: right;
+    font-size: 16px;
+    line-height: 56px;
+    margin: 0 20px;
+    position: relative;
+}
+.banner-box1>ul>li>span{
+    display: inline-block;
+    font-size: 8px;
+    position: absolute;
+    bottom: 2px;
+}
+.banner-box1>ul>li:first-child{
+    color: white;
+}
+.banner-box2>div:first-child{
+    font-size: 52px;
+    padding: 55px 0;
+    color: white;
+}
+.buchong{
+    width: 730px;
+    height: 48px;
+    line-height: 48px;
+    margin: 0 auto;
+}
+.banner-box2>div>div:first-child{
+    color: white;
+    width: 690px;
+    height: 48px;
+    float: left;
+}
+.banner-box2>div>div>input:last-child{
+    width: 690px;
+    height: 48px;
+    background-color:rgb(255, 255, 255);
+    box-sizing: border-box;
+    padding: 15px 20px;
+    font-size: 16px;
+}
+.banner-box2>div>div:last-child{
+    display: block;
+    width: 40px;
+    height: 48px;
+    float: right;
+    margin-top: 3px;
+    font-size: 22px;
+    color: red;
+}
+.banner-box3>ul{
+    width: 1190px;
+    height: 102px;
+    margin: 0 auto;
+}
+.banner-box3>ul>li{
+    width: 163.233px;
+    height: 102px;
+    float: left;
+}
+.more>img{
+    width: 56px;
+    height: 42px;
+}
+.more{
+    cursor: pointer;
+    height: 102px;
+    box-sizing: border-box;
+padding: 19.6px 0;
+color: rgb(255, 255, 255)
+}
+.banner>div>ul>li:hover{
+    text-decoration: underline white;
+}
+/*banner结束*/
+/*按产品找支持开始*/
+.product{
+    width: 100%;
+    height: 1278.8px;
+
+}
+.wrap{
+    width: 1230px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.product>div{
+    height: 1278.8px;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+.product-title{
+    padding-bottom:30px;
+    width: 100%;
+    height: 48px;
+    line-height: 1.4;
+    /*line-height是虚拟高度，除了调文字的横向位置外不会带来其它的任何影响*/
+    font-size: 40px;
+    color: rgb(102, 102, 102);
+}
+.product-link{
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    color: rgb(153, 153, 153);
+    display: flex;
+    justify-content: center;
+}
+.product-link>li{
+    float: left;
+    padding:0 15px;
+    box-sizing: border-box;
+    line-height: 40px;
+    border-right: 0.8px solid rgb(153, 153, 153);
+}
+.product-link>li:last-child{
+    border-right: 0;
+}
+.enterprise{
+    margin-top: 50px;
+}
+.enterprise>div{
+    width: 396.66px;
+    height: 330px;
+    border: 0.8px solid rgb(219, 219, 219);
+    padding: 50px 30px;
+    box-sizing: border-box;
+    float: left;
+}
+/*雪碧图开始*/
+.enterprise>div>div,.img-title{
+    float: left;
+}
+.img-title{
+    margin-left: 20px;
+    text-align: left;
+}
+.img-title>ul{
+    margin-top: 10px;
+    width: 220px;
+    height: 200px;
+    /*纵向的div均匀排列，得先获得水平排列方式*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.xue-img{
+    width: 46px;
+    height: 45px;
+    background-image: url("img/icons.png");
+    background-position: 616px 540px;
+}
+
+.xue-img2{
+    background-position: 565px 540px;
+}
+.xue-img3{
+    background-position: 500px 540px;
+}
+.xue-img4{
+    background-position: 442px 540px;
+}
+.xue-img5{
+    background-position: 396px 540px;
+}
+.xue-img6{
+    background-position: 340px 540px;
+}
+.xue-img7{
+    background-position: 283px 540px;
+}
+.xue-img8{
+    background-position: 227px 540px;
+}
+.xue-img9{
+    background-position: 171px 540px;
+}
+.img-title-title{
+font-size: 20px;
+}
+/*雪碧图结束*/
+/*按产品找致辞结束*/
+/*按行业解决方案找支持开始*/
+.trade{
+    width: 1190px;
+    height: 627.6px;
+    border-bottom: 1px solid #dbdbdb;
+    border-top: 1px solid #dbdbdb;
+    padding: 60px 20px 80px;
+    box-sizing: border-box;
+}
+.center-title{
+    height: 48px;
+    margin-bottom: 60px;
+    font-size: 40px;
+    line-height: 1.2;
+    color: #666;
+}
+.trade-go{
+    width: 100%;
+     height: 189px;
+}
+.trade-go>div>img{
+    height: 159px;
+}
+.trade-go{
+    display: flex;
+    justify-content: space-between;
+}
+.trade-go>div>img,.trade-go1>img{
+    width: 265.483px;
+}
+
+.trade-go1{
+    height: 159px;
+    float: left;
+}
+/*按行业解决方案找支持结束*/
+/*服务service开始*/
+.cistern{
+    width: 100%;
+    height: 250px;
+color: rgb(102, 102, 102)
+}
+.service{
+    height: 250px;
+    padding: 50px 20px 80px;
+    box-sizing: border-box;
+}
+.service-left{
+    width: 714px;
+    height: 100px;
+    margin-top: 20px;
+    float: left;
+}
+.service-right{
+    height: 119.2px;
+    float: right;
+}
+.service-left>li{
+    width: 25% !important;
+    height: 20px;
+    padding-right: 50px ;
+    margin-bottom: 30px;;
+    text-align: left;
+    float: left;
+    box-sizing: border-box;
+    line-height: 20px;
+}
+.service-right>li:first-child{
+    width: 105px;
+    height: 116px;
+    margin-left: 50px;
+    float: left;
+}
+.service-right>li:last-child{
+    height: 116px;
+    margin-left: 50px;
+    float: left;
+}
+.service-right>li:last-child>h2{
+    font-size: 14px;
+    color: rgb(51, 51, 51)
+}
+
+.service-right>li:first-child>img{
+    width: 100%;
+}
+.service-right>li:last-child>img{
+    width: 80px;
+    height: 80px;
+}
+/*服务service结束*/
+/*底部1开始*/
+.bottom-1{
+        width: 100%;
+    height: 310.75px;
+}
+.bottom-1>div{
+    height: 100%;
+    padding:22px 20px 32px;
+}
+.bottom-left{
+    width: 85%;
+    float: left;
+    overflow: hidden;
+    height: 310px;
+}
+.bottom-left>li{
+    width: 20%;
+    float: left;
+}
+.bottom-left>li>h2{
+    padding: 6px 20px 10px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align: left;
+}
+.bottom-left>li>p{
+    padding: 6px 20px 6px 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: left;
+}
+/*非常奇怪，bottom-right没有浮动，没有设立大小，内容居然在快标签里面居右右上角，按理说应该内容自动居左上角的*/
+.dick1{
+    margin-top: 5px;
+    display: flex;
+}
+.bottom-right span{
+    flex-grow: 1;
+    font-size: 28px;
+}
+.dick2{
+    margin-top: 20px;
+}
+/*底部1结束*/
+.bottom-2{
+    width: 100%;
+}
+.bottom-2>div{
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
+.bottom-2>div>span{
+    text-align: left;
+}
+.desk3{
+    float: right;
+}
+.desk3>span{
+    padding-right: 6px;
+    border-right: 1px solid black;
+    box-sizing: border-box;
+}
+.desk3>span:last-child{
+    border: none;
+}
