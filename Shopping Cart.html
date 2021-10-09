@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td,th{
+            /*此处border值为1时，边框折叠出现bug情况，部分边框会出现没有折叠的情况，解决办法两个，一是border值改变，二是表格大小改变*/
+            border: 0.5px solid;
+            text-align: center;
+            height: 45px;
+            padding: 0;
+            margin: 0;
+        }
+        table{
+            border-collapse: collapse;
+            width: 30%;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>产品名称</th>
+        <th>产品单价</th>
+        <th>产品数量</th>
+        <th>总价</th>
+    </tr>
+    <tr>
+        <td>iPhone5</td>
+        <td>500</td>
+        <td>
+            <input type="button" value="-" onclick="jian(this)">
+            <span>1</span>
+            <input type="button" value="+" onclick="jia(this)">
+        </td>
+        <td class="money">500</td>
+    </tr>
+    <tr>
+        <td>iPhone6</td>
+        <td>600</td>
+        <td>
+            <input type="button" value="-" onclick="jian(this)">
+            <span>1</span>
+            <input type="button" value="+" onclick="jia(this)">
+        </td>
+        <td class="money">600</td>
+    </tr>
+    <tr>
+        <td>iPhone7</td>
+        <td>700</td>
+        <td>
+            <input type="button" value="-" onclick="jian(this)">
+            <span>1</span>
+            <input type="button" value="+" onclick="jia(this)">
+        </td>
+        <td class="money">700</td>
+    </tr>
+    <tr>
+        <td colspan="3" >total</td>
+        <td id="total">1800</td>
+    </tr>
+</table>
+
+</body>
+</html>
+<script>
+
+    <!--有十二个属性可以不用获得元素就可以对元素进行操作-->
+    //第一步：  取得元素
+    function jia(obj) {
+        //获得数量的文本，并修改这个值
+        var num = parseInt(obj.previousElementSibling.innerHTML);
+        num++;
+//    把得到的值赋给文本
+        obj.previousElementSibling.innerHTML = num;
+        //获得非总价价格的文本，并修改这个值
+        var price = parseInt(obj.parentElement.nextElementSibling.innerHTML);
+        price = num*parseInt(obj.parentElement.previousElementSibling.innerHTML)
+//    把得到的值赋给文本
+        obj.parentElement.nextElementSibling.innerHTML = price;
+        //点击加号调用函数
+        totalPrice();
+    }
+    
+    function jian(obj) {
+        //获得数量的文本，并修改这个值
+        var num = parseInt(obj.nextElementSibling.innerHTML);
+        num--;
+//    把得到的值赋给文本
+        obj.nextElementSibling.innerHTML = num;
+        //获得非总价价格的文本，并修改这个值
+        var price = parseInt(obj.parentElement.nextElementSibling.innerHTML);
+        price = num*parseInt(obj.parentElement.previousElementSibling.innerHTML)
+//    把得到的值赋给文本
+        obj.parentElement.nextElementSibling.innerHTML = price;
+        // 点击减号调用函数
+        totalPrice();
+    }
+
+    //在函数里面编写总价的代码，然后通过事件输出
+    function totalPrice(){
+        //获取总金额所在的单元格
+        var money = document.getElementsByClassName('money');
+//    获得总价所在的单元格
+        var total = document.getElementById('total');
+        // 初始化总金额的值
+        var money1 = 0;
+        //遍历总价
+        for (var i =0;i<money.length;i++){
+            // 算出总金额
+            money1 = money1 +parseInt(money[i].innerHTML);
+        }
+        //将总金额送入总金额的单元格中
+        total.innerHTML = money1;
+    }
+</script>
