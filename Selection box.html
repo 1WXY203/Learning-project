@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+爱好：
+<input type="checkbox" name="hobby" value="opt1">交流
+<input type="checkbox" name="hobby" value="opt2">冥想
+<input type="checkbox" name="hobby" value="opt3">看剧
+<input type="checkbox" name="hobby" value="opt4">IT
+<input type="checkbox" name="hobby" value="opt5">玩游戏
+<hr>
+<input type="radio" name="btn" >全选
+<input type="radio" name="btn" >反选
+<input type="radio" name="btn" >不选
+</body>
+</html>
+<script>
+    var btn = document.getElementsByName('btn');
+    var opt = document.getElementsByName('hobby');
+    // console.log(btn);
+    //全选
+    btn[0].onclick = function () {
+        for(var i = 0;i<opt.length;i++){
+            opt[i].checked = true;
+        }
+    }
+    // 不选
+    btn[2].onclick = function () {
+        for(var i = 0;i<opt.length;i++){
+            opt[i].checked = false;
+        }
+    }
+//  反选最简洁做法
+    btn[1].onclick = function () {
+        for (var i = 0;i<opt.length;i++){
+            opt[i].checked = !opt[i].checked;
+        }
+    }
+
+    // 反选简介做法
+    // btn[1].onclick = function () {
+    //    for (var i = 0; i<opt.length;i++){
+    //        if (opt[i].checked){
+    //            opt[i].checked = false;
+    //        }
+    //        else{
+    //            opt[i].checked = true;
+    //        }
+    //    }
+    // }
+
+    //反选麻烦做法
+    // btn[1].onclick = function () {
+    //     for (var i = 0; i<opt.length;i++){
+    //         if (opt[i].checked){
+    //             opt[i].checked = false;
+    //         }
+    //         else{
+    //             opt[i].checked = true;
+    //         }
+    //     }
+    // }
+</script>
