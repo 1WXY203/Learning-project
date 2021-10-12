@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: darkred;
+            border-radius: 50%;
+            position:fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
+<script>
+    var ball = document.getElementsByTagName('div')[0];
+    //    如果实在不知道怎么做，那么一边做，一边想
+    //给document绑定事件
+    document.onkeydown = function (e) {
+        e = e ||window.event;
+        var str =getStyle(ball);
+        switch (e.keyCode) {
+            case 37:
+                ball.style.left = parseInt(str.left)-10+'px';
+                break;
+            case 38:
+                ball.style.top = parseInt(str.top)-10+'px';
+                break;
+            case 39:
+                ball.style.left = parseInt(str.left)+10+'px';
+                break;
+            case 40:
+                ball.style.top = parseInt(str.top)+10+'px';
+                break;
+        }
+    };
+    //获得内部样式
+    function getStyle(ele) {
+       if (window.getComputedStyle ===undefined){
+           return ele.currencySystem;
+       }
+       else{
+           return window.getComputedStyle(ele,null);
+       }
+    }
+</script>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+        .box1,.box2{
+            background-color: darkred;
+            width: 250px;
+            height: 400px;
+            float: left;
+            border-radius: 200px 200px 0 0;
+        }
+        .box1:after{
+            left: 0;
+            border-width: 120px 120px;
+            border-color:  darkred darkred white white ;
+        }
+        .box2:before{
+            right: 0;
+            border-width: 120px 130px;
+            border-color:darkred   white   white darkred ;
+        }
+        .box1:after,.box2:before{
+            position: absolute;
+            bottom: 0;
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="box1"></div>
+    <div class="box2"></div>
+</div>
+</body>
+</html>
+<script>
+<!--    鼠标按下onmousedown,鼠标点击onclick-->
+var div = document.getElementById('box');
+div.onmousedown = function (e) {
+    e = e ||window.event;
+    var div_x =e.offsetX;
+    var div_y =e.offsetY;
+    //嵌套函数的使用：在需要两个函数里的变量需要交互时的使用可以减少全局变量的数量
+    document.onmousemove = function (f) {
+       f = f ||window.event;
+       var body_x = f.clientX;
+       var body_y = f.clientY;
+        div.style.left =(body_x-div_x)+'px';
+        div.style.top =(body_y-div_y)+'px';
+    }
+};
+div.onmouseup = function () {
+    //DOM级事件清理方式
+    document.onmousemove = null;
+};
+</script>

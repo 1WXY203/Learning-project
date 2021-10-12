@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        ul{
+            list-style: none;
+            background-color: #ccc;
+            width: 150px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding-left: 30px;
+            display: none;
+        }
+        li{
+            line-height: 2.5em;
+            background-color: #eee;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<ul id="menu">
+    <li>复制</li>
+    <li>粘贴</li>
+    <li>删除</li>
+</ul>
+</body>
+</html>
+<script>
+<!--获得元素-->
+    var ul =document.getElementById('menu');
+    //为document添加鼠标右击事件
+    document.oncontextmenu = function (e) {
+        //获得对象事件
+        e = e ||window.event;
+    //    阻止默认行为
+        e.preventDefault=undefined?e.returnValue = false:e.preventDefault();
+        var x = e.clientX;
+        var y = e.clientY;
+        ul.style.display = 'block';
+        ul.style.left = x+'px';
+        ul.style.top = y+'px';
+    };
+//    为document添加鼠标左击事件
+//        ①：直接让元素none
+    document.onclick = function () {
+        ul.style.display = 'none';
+    };
+//        ②；用document.oncontextmenu = null;虽然能清除上一个事件，但是上一个事件产生时效果抹除不了
+//     document.onclick = function () {
+//         document.oncontextmenu = null;
+//     };
+//    onclick不是鼠标左击事件，就是任何的鼠标点击就能够触发
+</script>
