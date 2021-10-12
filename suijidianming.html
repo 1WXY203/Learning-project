@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button"value="开始" name="kai">
+<input type="button"value="结束" name="jie">
+<span>小明</span>
+</body>
+</html>
+<script>
+    var sui = ['小猪','小梅','小花','小田','小紫','小金','小张'];
+    var kai = document.getElementsByName('kai')[0];
+    var jie = document.getElementsByName('jie')[0];
+    var span = document.getElementsByTagName('span')[0];
+     var times;
+    function getName() {
+        var index = parseInt(Math.random()*sui.length);
+        span.innerHTML = sui[index];
+    };
+    kai.onclick = function () {
+        clearInterval(times);
+        times = setInterval(getName,100);
+    };
+
+    jie.onclick = function () {
+        //清除的是定时器的名字，记错了
+        clearInterval(times);
+    };
+
+
+</script>
